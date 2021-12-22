@@ -1,22 +1,7 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-        <script src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-        <title></title>
-    </head> -->
-
 <!-- <body> -->
 <nav class="navbar has-shadow is-white is-fixed-top">
     <div class="navbar-brand py-4 px-2" style="margin-left: 40px;max-height : 60px">
-        <a class="navbar-brand">
+        <a href="{% url 'index'%}" class="navbar-brand">
             <span class="icon is-brand" alt="brand">
                 <i class="fas fa-globe fa-3x"></i>
             </span> &nbsp; &nbsp; &nbsp; VHost
@@ -30,21 +15,22 @@
 
     <div class="navbar-menu" id=nav-links>
         <div class="navbar-start" style="margin-left: 100px;">
-            <a href="../index.php" class="navbar-item">
+            <a href="{% url 'index'%}" class="navbar-item">
                 <span class="icon is-small">
                     <i class="fas fa-home"></i>
                 </span> &nbsp; Home</a>
 
-            <a href="../templates/about.php" class="navbar-item">
+            <a href="{% url 'about'%}" class="navbar-item">
                 <span class="icon is-small">
                     <i class="fas fa-address-card"></i>
                 </span> &nbsp; About</a>
 
-            <a href="./contactus.php" class="navbar-item">
+            <a href="{% url 'contact'%}" class="navbar-item">
                 <span class="icon is-small">
                     <i class="fas fa-paper-plane"></i>
                 </span> &nbsp; Contact us</a>
-            <a href="./purchase.php" class="navbar-item">
+
+            <a href="{% url 'purchase'%}" class="navbar-item">
                 <span class="icon is-small">
                     <i class="fas fa-money-bill-alt"></i>
                 </span> &nbsp; purchase </a>
@@ -149,6 +135,15 @@
                                         </div>
                                     </div>
                                     <div class="field">
+                                        <label class="label">Email</label>
+                                        <div class="control has-icons-left has-icons-right">
+                                            <input name="email" class="input" type="email" placeholder="Email" required>
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-envelope"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="field">
                                         <label class="label">Password</label>
                                         <p class="control has-icons-left">
                                             <input name="pass" class="input" type="password" placeholder="Password"
@@ -167,15 +162,6 @@
                                                 <i class="fas fa-lock"></i>
                                             </span>
                                         </p>
-                                    </div>
-                                    <div class="field">
-                                        <label class="label">Email</label>
-                                        <div class="control has-icons-left has-icons-right">
-                                            <input name="email" class="input" type="email" placeholder="Email" required>
-                                            <span class="icon is-small is-left">
-                                                <i class="fas fa-envelope"></i>
-                                            </span>
-                                        </div>
                                     </div>
                                     <div class="field">
                                         <div class="control">
@@ -204,60 +190,3 @@
         </div>
     </div>
 </section>
-
-
-<!-- java script -->
-
-<script>
-
-    //mobile menu
-    const burgerIcon = document.querySelector('#burger');
-    const navbarMenu = document.querySelector('#nav-links');
-
-    burgerIcon.addEventListener('click', () => {
-        navbarMenu.classList.toggle('is-active');
-    });
-
-    //login modal 
-    $(".modal-button").click(function () {
-        var target = $(this).data("target");
-        $("html").addClass("is-clipped");
-        $(target).addClass("is-active");
-    });
-
-    $(".modal-close").click(function () {
-        $("html").removeClass("is-clipped");
-        $(this).parent().removeClass("is-active");
-    });
-
-    document.getElementById("one").onclick = function () {
-        showTab(this)
-    };
-    document.getElementById("two").onclick = function () {
-        showTab(this)
-    };
-
-    function showTab(e) {
-        let selectType = $(e).attr("data-select");
-
-        console.log(selectType);
-        if (selectType == 'one') {
-            $("#tabs2").addClass('is-hidden');
-            $("#tabs1").removeClass('is-hidden');
-            $('#activeIdOne').addClass('is-active');
-            $("#activeIdTwo").removeClass('is-active');
-
-        } else if (selectType == 'two') {
-
-            $("#tabs1").addClass('is-hidden');
-            $("#tabs2").removeClass('is-hidden');
-
-            $('#activeIdOne').removeClass('is-active');
-            $("#activeIdTwo").addClass('is-active');
-        }
-    }
-</script>
-
-<!-- </body>
-
-</html> -->
