@@ -42,6 +42,7 @@
                 &nbsp;<span class="icon is-small"><i class="fas fa-sign-in-alt" aria-hidden="true"></i></span>
             </a>
         </div>
+
         <!-- <div class="navbar-end" style="margin-right: 80px;">
                 <a href="index.php" class="navbar-item modal-button" id="logout">Logout &nbsp;<span class="icon is-small"><i class="fas fa-blind" aria-hidden="true"></i></span>
                 </a>
@@ -51,7 +52,8 @@
 </nav>
 <!-- NAVBAR ENDS HERE -->
 
-<!-- LOGIN AND REGISTRATION FORM -->
+
+<!-- LOGIN AND REGISTRATION FORM MODAL -->
 <section class="section">
     <div class="container">
         <div id="modal" class="modal">
@@ -78,7 +80,10 @@
                                     </li>
                                 </ul>
                             </div>
-                            <form action="" method="post">
+
+                            <!-- LOGIN FORM -->
+
+                            <form action="" method="POST">
                                 <div class="login" id="tabs1">
                                     <div class="field">
                                         <label class="label">Username</label>
@@ -114,14 +119,13 @@
                                     </div>
                                 </div>
                             </form>
-                            <form method="post" action="">
+                            <!-- LOGIN FORM END HERE -->
+
+
+                            <!-- REGISTRATION FORM -->
+
+                            <form method="POST" action="">
                                 <div class="register is-hidden" id="tabs2">
-                                    <!-- <div class="field">
-                                            <label class="label">Name</label>
-                                            <div class="control">
-                                                <input name="name" class="input" type="text" placeholder="Text input">
-                                            </div>
-                                        </div> -->
                                     <div class="field">
                                         <label class="label">Username</label>
                                         <div class="control has-icons-left has-icons-right">
@@ -172,16 +176,15 @@
                                         </div>
                                     </div>
                                     <div class="field">
-                                        <div class="control mt-5 ml-6">
-                                            <input name="signup" class="button is-link ml-4" type="submit"
-                                                style="width: 70%;" value="Signup"></input>
-
-                                            <button class="button is-danger is-outlined ml-3" type="reset">Clear
-                                                inputs</button>
+                                        <div class="control mt-5">
+                                            <input name="signup" class="button is-link is-fullwidth" type="submit"
+                                                value="Signup"></input>
                                         </div>
                                     </div>
                                 </div>
                             </form>
+                            <!-- REGISTRATION FORM END HERE -->
+
                         </div>
                     </article>
                 </div>
