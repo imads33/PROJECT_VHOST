@@ -4,3 +4,15 @@ from django.contrib.auth.models import User
 # from contacts.models import Contacts
 
 # Create your views here.
+
+
+def register(request):
+    return render(request, 'pages/index.html')
+
+
+def login(request):
+    return render(request, 'pages/index.html')
+
+
+def logout(request):
+    return render(request, 'pages/index.html')
